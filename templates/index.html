@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>活动申报助手</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    padding: 40px 15px;
+    color: #252525;
+}
+
+.container {
+    max-width: 680px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #263b57;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>活动申报助手</h1>
+<p class="subtitle">填写活动信息，自动生成申报表</p>
+
+<form method="POST">
+
+<label>活动名称</label>
+<input name="name" required placeholder="请输入活动名称">
+
+<label>举办单位</label>
+<input name="organizer" required placeholder="请输入举办单位">
+
+<label>活动类别</label>
+<select name="category" required>
+    <option value="思想成长">思想成长</option>
+    <option value="文体活动">文体活动</option>
+    <option value="创新创业">创新创业</option>
+    <option value="技能特长">技能特长</option>
+</select>
+
+<label>活动级别</label>
+<select name="level" required>
+    <option value="校级">校级</option>
+    <option value="院级">院级</option>
+    <option value="班团支部级">班团支部级</option>
+</select>
+
+<label>活动地点</label>
+<input name="location" value="智华科技楼A302教室">
+
+<label>活动时间</label>
+<input name="time" required placeholder="例如：2026年11月25日 14:00-16:00">
+
+<label>报名时间</label>
+<input name="signup_time" placeholder="请输入报名时间">
+
+<label>活动参与对象</label>
+<input name="target" placeholder="例如：全校学生">
+
+<label>参与人数</label>
+<input name="number" type="number" placeholder="请输入人数">
+
+<label>活动申请人</label>
+<input name="applicant" placeholder="请输入申请人姓名">
+
+<label>联系方式</label>
+<input name="phone" placeholder="请输入联系电话">
+
+<label>活动内容</label>
+<textarea name="content" required placeholder="请详细描述活动目的、流程、内容等"></textarea>
+
+<button type="submit">生成并下载 Word 申报表</button>
+
+</form>
+</div>
+
+</body>
+</html>
